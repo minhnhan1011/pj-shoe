@@ -1,79 +1,199 @@
 .header {
-    padding: 10px 48px;
-    max-width: 1920px;
-    position: relative;
-    z-index: 3;
-    background-color: #F5F5F5;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 48px;
+  max-width: 1920px;
+  position: relative;
+  z-index: 3;
+  background-color: #f5f5f5;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .list-header {
-    list-style: none;
-    display: flex;
-    padding-top: 3px;
+  list-style: none;
+  display: flex;
+  padding-top: 3px;
 }
 
 .no-dropdown {
-    border-right: 1px solid #000;
-    padding: 0 10px;
+  border-right: 1px solid #000;
+  padding: 0 10px;
 }
 
 .no-dropdown:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .list-header li:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-list {
-    display: none;
-    width: 240px;
-    position: absolute;
-    top: 170%;
-    right: -20px;
-    background: white;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 999;
+  display: none;
+  width: 240px;
+  position: absolute;
+  top: 170%;
+  right: -20px;
+  background: white;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 999;
 }
 
 .dropdown-list::before {
-    content: " ";
-    position: absolute;
-    top: -12px;
-    right: 33px;
-    width: 10px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #F5F5F5 transparent transparent transparent;
+  content: " ";
+  position: absolute;
+  top: -12px;
+  right: 33px;
+  width: 10px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #f5f5f5 transparent transparent transparent;
 }
 
-
 .dropdown:hover .dropdown-list {
-    display: block;
+  display: block;
 }
 
 .dropdown-list li {
-    padding: 5px 10px;
-    white-space: nowrap;
+  padding: 5px 10px;
+  white-space: nowrap;
 }
 
 .dropdown-list li:hover {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
+.header-second {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.header-banner {
+  padding-left: 22px;
+}
+
+.header-choice {
+  display: flex;
+  position: relative;
+}
+
+.header-list-choice {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  /* padding-top: 12px; */
+  padding: 12px 10px 0px 80px;
+}
+
+.header-list-choice li {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  background: white;
+  padding: 20px 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+.dropdown-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.dropdown-column h4 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-weight: 750;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-column ul li {
+  font-size: 11px;
+  font-weight: 600;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.dropdown-column ul li:hover {
+  text-decoration: underline;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 8px 10px;
+  border-radius: 999px;
+  width: 52%;
+}
+.header-search .search-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.header-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
