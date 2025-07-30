@@ -6,6 +6,8 @@ import { faCreditCard } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Jordan from "../../assets/jordan.png";
 import Nike from "../../assets/nike-logo.png";
+import NikeBanner from "../../assets/nike-banner.avif";
+import HomePage from "../content/HomePage";
 
 function Header() {
   return (
@@ -290,6 +292,16 @@ function Header() {
           </div>
         </div>
       </div>
+      <div className="header-third">
+        <div className="header-line slide-in">
+          <span className="text-header-third">Free Standard Delivery & 30-Day Free Returns</span>
+          <span className="text-header-third center-text">Join Now View Details</span>
+        </div>
+      </div>
+      <div className="header-banner-nike">
+        <img src={NikeBanner} alt="nike-banner" width="100%" height="950px" />
+      </div>
+      <HomePage />
     </div>
   );
 }
